@@ -6,9 +6,15 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+add_subdirectory(vendor/GLFW)
+
 add_executable(Krone
   "source/Main.cpp"
 )
+
+add_compile_options()
+
+target_link_libraries(Krone PRIVATE glfw)
 
 set_target_properties(Krone
   PROPERTIES
